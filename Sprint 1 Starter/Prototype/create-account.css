@@ -1,0 +1,240 @@
+.create-account-container {
+  min-height: 100vh;
+}
+
+input[type="submit"] {
+  background-color:#6fedeb;
+  color: white;
+  text-align:center;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+.create-account-frame1 {
+  width: 100%;
+  height: 960px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(125, 193, 197, 0.8100000023841858);
+}
+.create-account-rectangle7 {
+  right: 0px;
+  width: 750px;
+  bottom: 0px;
+  height: 750px;
+  margin: auto;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 160px;
+}
+.create-account-rectangle8 {
+  top: 0px;
+  left: 0px;
+  width: 750px;
+  height: 750px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 160px;
+}
+.create-account-rectangle1 {
+  top: 131px;
+  left: 451px;
+  width: 698px;
+  height: 698px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 49.090110778808594px;
+}
+.create-account-text {
+  top: 198.4989013671875px;
+  left: 558.3846435546875px;
+  color: var(--dl-color-default-heading);
+  width: 483px;
+  height: auto;
+  position: absolute;
+  font-size: 55.22637176513672px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 700;
+  line-height: 71.79428100585938px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text02 {
+  top: 276.73626708984375px;
+  left: 562.98681640625px;
+  color: rgba(50, 64, 59, 1);
+  width: 472px;
+  height: auto;
+  position: absolute;
+  font-size: 23.010988235473633px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.914287567138672px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-century131 {
+  top: 15px;
+  left: 0px;
+  width: 381px;
+  height: 220px;
+  position: absolute;
+}
+.create-account-rectangle2 {
+  top: 320px;
+  left: 511px;
+  width: 575px;
+  height: 84px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-rectangle3 {
+  top: 416px;
+  left: 512px;
+  width: 575px;
+  height: 84px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-rectangle9 {
+  top: 513px;
+  left: 511px;
+  width: 575px;
+  height: 84px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-container1 {
+  top: 609.625px;
+  left: 604.40625px;
+  width: 391px;
+  height: 91px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.create-account-container2 {
+  top: 0px;
+  left: 0px;
+  width: 391px;
+  height: 91px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.create-account-container3 {
+  top: 0px;
+  left: 0px;
+  width: 391px;
+  height: 91px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.create-account-link {
+  display: contents;
+}
+.create-account-rectangle4 {
+  top: 0px;
+  left: 0px;
+  width: 391px;
+  height: 91px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 23.010988235473633px;
+  text-decoration: none;
+}
+.create-account-text04 {
+  top: 23.01043701171875px;
+  left: 72.09375px;
+  color: rgba(255, 255, 255, 1);
+  width: 245px;
+  height: auto;
+  position: absolute;
+  font-size: 33.74945068359375px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 700;
+  line-height: 43.87428665161133px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text06 {
+  top: 717.01318359375px;
+  left: 636.6219482421875px;
+  color: rgb(50, 64, 59);
+  width: 327px;
+  height: auto;
+  position: absolute;
+  font-size: 21.4769px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 27.92px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+.create-account-textinput {
+  top: 347px;
+  left: 540px;
+  padding: 0px;
+  position: absolute;
+  font-size: 25px;
+  border-color: #ffffff;
+}
+.create-account-textinput1 {
+  top: 549px;
+  left: 550px;
+  padding: 0px;
+  position: absolute;
+  font-size: 25px;
+  border-color: #ffffff;
+  border-radius: var(--dl-radius-radius-radius8);
+}
+.create-account-textinput2 {
+  top: 453px;
+  left: 548px;
+  padding: 0px;
+  position: absolute;
+  font-size: 25px;
+  border-color: #ffffff;
+  border-radius: var(--dl-radius-radius-radius8);
+}
