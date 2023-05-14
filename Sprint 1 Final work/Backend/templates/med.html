@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical History</title>
+</head>
+<body>
+	<h1>Medical History for {{ patient_name }}</h1>
+	<ul>
+	{% for record in medical_history %}
+		<li>
+			<h2>{{ record.date }}</h2>
+			<p>{{ record.diagnosis }}</p>
+			<p>{{ record.treatment }}</p>
+		</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

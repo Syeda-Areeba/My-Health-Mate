@@ -1,0 +1,241 @@
+.login-container {
+  min-height: 100vh;
+}
+
+input[type="submit"] {
+  background-color:#6fedeb;
+  color: white;
+  text-align:center;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 28px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-frame2 {
+  width: 100%;
+  height: 960px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(125, 193, 197, 0.8100000023841858);
+}
+.login-rectangle7 {
+  right: 0px;
+  width: 750px;
+  bottom: 0px;
+  height: 750px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 160px;
+}
+.login-rectangle8 {
+  top: 0px;
+  left: 0px;
+  width: 750px;
+  height: 750px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 160px;
+}
+.login-rectangle1 {
+  top: 131px;
+  left: 451px;
+  width: 698px;
+  height: 698px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 49.090110778808594px;
+}
+.login-group4 {
+  top: 244px;
+  left: 558px;
+  width: 483.23077392578125px;
+  height: 138.06593322753906px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  border-radius: 0px 0px 0px 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+.login-text {
+  color: var(--dl-color-default-heading);
+  width: 483px;
+  height: auto;
+  position: absolute;
+  font-size: 55.22637176513672px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 700;
+  line-height: 71.79428100585938px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-text02 {
+  top: 78.23736572265625px;
+  left: 4.6021728515625px;
+  color: rgba(50, 64, 59, 1);
+  width: 472px;
+  height: auto;
+  position: absolute;
+  font-size: 23.010988235473633px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.914287567138672px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-rectangle2 {
+  top: 410px;
+  left: 506px;
+  width: 575px;
+  height: 84px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.login-rectangle3 {
+  left: 511px;
+  width: 575px;
+  bottom: 341px;
+  height: 84px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.login-link {
+  display: contents;
+}
+.login-container1 {
+  top: 655px;
+  left: 603px;
+  width: 391.1770935058594px;
+  height: 90.5px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  text-decoration: none;
+}
+.login-group3 {
+  top: 0px;
+  left: 0px;
+  width: 391.18682861328125px;
+  height: 90.5098876953125px;
+  display: flex;
+  padding: 0;
+  position: absolute;
+  align-self: auto;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-color: transparent;
+  border-style: none;
+  border-width: 0;
+  border-radius: 0px 0px 0px 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: rgba(151, 223, 233, 1);
+}
+.login-text04 {
+  top: 23.0111083984375px;
+  left: 72.10107421875px;
+  color: rgba(255, 255, 255, 1);
+  width: 245px;
+  height: auto;
+  position: absolute;
+  font-size: 33.74945068359375px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 700;
+  line-height: 43.87428665161133px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.login-text06 {
+  top: 380px;
+  left: 520px;
+  color: rgba(0, 0, 0, 0.5);
+  height: auto;
+  position: absolute;
+  font-size: 23.010000228881836px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  transition: 0.3s;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 19.5px;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.login-century131 {
+  top: 15px;
+  left: 0px;
+  width: 381px;
+  height: 220px;
+  position: absolute;
+}
+.login-text08 {
+  top: 507px;
+  left: 522px;
+  color: rgba(0, 0, 0, 0.5);
+  height: auto;
+  position: absolute;
+  font-size: 23.010000228881836px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 19.5px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.login-textinput {
+  top: 435px;
+  left: 532px;
+  padding: 0px;
+  position: absolute;
+  font-size: 25px;
+  border-color: #ffffff;
+}
+.login-textinput1 {
+  top: 563px;
+  left: 535px;
+  padding: 0px;
+  position: absolute;
+  font-size: 25px;
+  border-color: #ffffff;
+  border-radius: var(--dl-radius-radius-radius8);
+}

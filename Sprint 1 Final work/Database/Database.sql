@@ -11,7 +11,7 @@ CREATE TABLE MEDICINE
 (
     MED_NO int PRIMARY KEY auto_increment,
     MED_NAME VARCHAR(20) NOT NULL,
-    PRICE NUMERIC(4, 3),
+    PRICE INT,
     EXP_DATE DATE,
     Mg_Med varchar(23)
 );
@@ -32,19 +32,22 @@ CREATE TABLE PATIENT
     P_SSN int PRIMARY KEY auto_increment,
     P_Name VARCHAR(50),
     age INTEGER,
-    gender CHAR(1),
     Email varchar(255),
     phone varchar(255),
     P_Password varchar(255)
 );
 
-CREATE TABLE PATIENT_DISE
-(
-P_SSN int,
-DISEASE_ID int,
-FOREIGN KEY (P_SSN) REFERENCES PATIENT(P_SSN),
-FOREIGN KEY (DISEASE_ID) REFERENCES DISEASE(DISEASE_ID),
-PRIMARY KEY(P_SSN,DISEASE_ID)
+CREATE TABLE DISEASE(
+	DISEASE_ID INT PRIMARY KEY AUTO_INCREMENT,
+    DISEASE_NAME VARCHAR(40)
+);
+
+CREATE TABLE PATIENT_DISEASE(
+	P_SSN int,
+	DISEASE_ID int,
+	FOREIGN KEY (P_SSN) REFERENCES PATIENT(P_SSN),
+	FOREIGN KEY (DISEASE_ID) REFERENCES DISEASE(DISEASE_ID),
+	PRIMARY KEY(P_SSN,DISEASE_ID)
 );
 
 -- Appointment Table
@@ -141,37 +144,37 @@ INSERT INTO MEDICINE(MED_NAME,PRICE,EXP_DATE,Mg_Med) VALUES
 ("Haloperidol", "200", "2024-02-15", "290mg"),
 ("Clozapine", "250", "2022-11-30", "300mg");
 
-INSERT INTO PATIENT(P_Name,age,gender,email,phone,P_Password) VALUES
-( "John Smith", "35", "M","john12@gmail.com","+2-305-540-20976","9Tf&cD#r@pNq"),
-( "Sarah Lee", "27", "F","sarah12@gmail.com","+4-325-590-0987","$y6nBx!v#Gz"),
-( "David Wong", "52", "M","david12@gmail.com","+1-350-540-1291","P*m8cL@n#fVw"),
-("Rachel Cohen", "44", "F", "rachel12@gmail.com","+4-305-540-1223","J^e7bQ$t#kRc"),
-("Andreas Müller", "63", "M","andreas12@gmail.com","+9-312-567-8793","5Hg#dX6@zYj"),
-("Ana Rodriguez", "9", "F","ana12@gmail.com","+7-312-540-2763","U!v2wT#z$qK" ),
-("Mohamed Ahmed", "41", "M","mohamed12@gmail.com","+0-305-120-1498","C%r1s@f9#dJ"),
-("Maryam Khan", "49", "F","maryam12@gmail.com","+9-312-121-21223","N#h3Gx6@kFp"),
-("Stefan Schneider", "56",  "M","stephen12@gmail.com","+1-3123-0986-1234","8Zl&vS#q7cX"),
-( "Sofia Martinez", "37", "F", "sophia12@gmail.com","+2-785-123-9871","B*4WfL#m6tR"),
-("Amir Ali", "33", "M", "amir12@gmail.com","+1-305-123-0987","Q!7nHc#j2vZ"),
-("Emma Wilson", "29", "F","emma12@gmail.com","+2-115-902-1234","K$9yVx#z5pN"),
-("Juan Hernandez", "48", "M","juan12@gmail.com","+9-123-098-1234","S#w2Nf9$qLr"),
-("Fatima Ali", "41", "F","fatima12@gmail.com","+3-111-540-176","Z!m7Kd#r4hX"),
-("Kim Sung", "57", "M","skim12@gmail.com","+2-225-123-9876","A$6vTc#p5qJ"),
-("Laila Ahmed", "24", "F","laila12@gmail.com","+4-344-1345-1093","F#b8Hg7@nXk"),
-("Paolo Rossi", "60", "M","paolo12@gmail.com","+1-115-085-22343","D!x2Lc#t6sZ"),
-("Anna Nguyen", "31", "F","anna12@gmail.com","+1-441-134-1209","O%p9Gq#r4kT"),
-("Ahmed Khan", "53", "M","ahmed12@gmail.com","+1-325-0945-2712","R@3fNv#m8jC"),
-("Maria Garcia", "39", "F","maria12@gmail.com","+2-120-230-127","Y#h6Wt5$pLg"),
-( "Tariq Malik", "46", "M","tariq12@gmail.com","+3-305-513-2098","I!u7Qc#f2sZ"),
-( "Jennifer Kim", "28", "F","jennifier12@gmail.com","+1-094-120-1398","X$4mPb#n6kF"),
-("Mohammed Ali", "50", "M","ali12@gmail.com","+2-223-540-4578","T#g5Sf6@qLp"),
-("Laura Perez", "42", "F","laura12@gmail.com","+2-315-523-0915","U!v9Nc#j4xR"),
-("Daniel Kim", "19", "M", "deniel2@gmail.com","+4-234-097-2723","E$2hDm#k5sV"),
-( "Megan Johnson", "32", "F","megan12@gmail.com","+2-985-270-8741","B*4vMq#p6cR"),
-("Ali Hassan", "43", "M","hassan12@gmail.com","+3-333-530-2763","P!j2Nf#t5rK"),
-("Emily Jones", "25", "F", "jones12@gmail.com","+3-333-450-0973","G%9dLc#r7hX"),
-("Abdullah Ibrahim", "36", "M", "abdullah12@gmail.com","+2-344-543-25678","Y!t7Hc#m8nX"),
-("Hannah Brown", "21", "F","hannah12@gmail.com","+1-986-222-1246","F#p8Gt6@qNc");
+INSERT INTO PATIENT(P_Name,age,email,phone,P_Password) VALUES
+( "John Smith", "35","john12@gmail.com","+2-305-540-20976","9Tf&cD#r@pNq"),
+( "Sarah Lee", "27", "sarah12@gmail.com","+4-325-590-0987","$y6nBx!v#Gz"),
+( "David Wong", "52","david12@gmail.com","+1-350-540-1291","P*m8cL@n#fVw"),
+("Rachel Cohen", "44", "rachel12@gmail.com","+4-305-540-1223","J^e7bQ$t#kRc"),
+("Andreas Müller", "63","andreas12@gmail.com","+9-312-567-8793","5Hg#dX6@zYj"),
+("Ana Rodriguez", "9","ana12@gmail.com","+7-312-540-2763","U!v2wT#z$qK" ),
+("Mohamed Ahmed", "41","mohamed12@gmail.com","+0-305-120-1498","C%r1s@f9#dJ"),
+("Maryam Khan", "49","maryam12@gmail.com","+9-312-121-21223","N#h3Gx6@kFp"),
+("Stefan Schneider", "56","stephen12@gmail.com","+1-3123-0986-1234","8Zl&vS#q7cX"),
+( "Sofia Martinez", "37", "sophia12@gmail.com","+2-785-123-9871","B*4WfL#m6tR"),
+("Amir Ali", "33","amir12@gmail.com","+1-305-123-0987","Q!7nHc#j2vZ"),
+("Emma Wilson", "29","emma12@gmail.com","+2-115-902-1234","K$9yVx#z5pN"),
+("Juan Hernandez", "48","juan12@gmail.com","+9-123-098-1234","S#w2Nf9$qLr"),
+("Fatima Ali", "41","fatima12@gmail.com","+3-111-540-176","Z!m7Kd#r4hX"),
+("Kim Sung", "57", "skim12@gmail.com","+2-225-123-9876","A$6vTc#p5qJ"),
+("Laila Ahmed", "24","laila12@gmail.com","+4-344-1345-1093","F#b8Hg7@nXk"),
+("Paolo Rossi", "60","paolo12@gmail.com","+1-115-085-22343","D!x2Lc#t6sZ"),
+("Anna Nguyen", "31", "anna12@gmail.com","+1-441-134-1209","O%p9Gq#r4kT"),
+("Ahmed Khan", "53", "ahmed12@gmail.com","+1-325-0945-2712","R@3fNv#m8jC"),
+("Maria Garcia", "39", "maria12@gmail.com","+2-120-230-127","Y#h6Wt5$pLg"),
+( "Tariq Malik", "46", "tariq12@gmail.com","+3-305-513-2098","I!u7Qc#f2sZ"),
+( "Jennifer Kim", "28", "jennifier12@gmail.com","+1-094-120-1398","X$4mPb#n6kF"),
+("Mohammed Ali", "50","ali12@gmail.com","+2-223-540-4578","T#g5Sf6@qLp"),
+("Laura Perez", "42", "laura12@gmail.com","+2-315-523-0915","U!v9Nc#j4xR"),
+("Daniel Kim", "19",  "deniel2@gmail.com","+4-234-097-2723","E$2hDm#k5sV"),
+( "Megan Johnson", "32", "megan12@gmail.com","+2-985-270-8741","B*4vMq#p6cR"),
+("Ali Hassan", "43","hassan12@gmail.com","+3-333-530-2763","P!j2Nf#t5rK"),
+("Emily Jones", "25","jones12@gmail.com","+3-333-450-0973","G%9dLc#r7hX"),
+("Abdullah Ibrahim", "36", "abdullah12@gmail.com","+2-344-543-25678","Y!t7Hc#m8nX"),
+("Hannah Brown", "21", "hannah12@gmail.com","+1-986-222-1246","F#p8Gt6@qNc");
 
 INSERT INTO DOCTOR(DNAME,GENDER,QUALIFICATION,JOB_SPECIFICATION,HOSP_ID) VALUES 
 ("Dr. John Smith", "M", "MD", "Cardiologist", 1),
@@ -340,7 +343,7 @@ Insert into DISEASE(DISEASE_NAME) Values
  ("Gastroenteritis"), 
  ("Tuberculosis");
 
- INSERT INTO PATIENT_DISE VALUES
+ INSERT INTO PATIENT_DISEASE VALUES
 (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), 
 (6, 7), (7, 8),
  (8, 9), (9, 10), 

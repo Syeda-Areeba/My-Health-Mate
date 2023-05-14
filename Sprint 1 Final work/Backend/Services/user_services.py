@@ -1,10 +1,12 @@
 from Database.db import db,my_cursor
+from Services.prediction_services import disease_order
 import pickle
 import numpy as np
 
-def login_fucntion(email,password):
+def login_function(email,password):
     my_cursor.execute(f'''
-            SELECT email FROM Patient WHERE email='{email}' and password='{password}'
+            SELECT email FROM PATIENT 
+            WHERE email='{email}' AND P_Password ='{password}'
                         ''')
     record = my_cursor.fetchone()
     print('record : ',record)
@@ -13,14 +15,27 @@ def login_fucntion(email,password):
     else:
         return True  
     
-def registration_fucntion(name,email,password,age,phone):
+def registration_function(name,email,password,age,phone):
     try:
-        record  = [name,email,password,age,phone]
-        my_cursor.execute('INSERT INTO PATIENT VALUES (%s,%s,%s,%s,%s)',record)
+        record  = [name,age,email,phone,password]
+        my_cursor.execute('''
+            INSERT INTO PATIENT(P_Name,age,email,phone,P_Password) 
+            VALUES (%s,%s,%s,%s,%s)''', record)
         db.commit()
         return True
     except:
         return False
+    
+
+def get_precautions(disease):
+    my_cursor.execute(f'''
+            SELECT Precaution_1, Precaution_2, Precaution_3, Precaution_4
+            FROM Precautions 
+            WHERE Disease_name = "{disease}"
+                ''')
+    p_list = my_cursor.fetchone()
+
+    return p_list
     
 
 def predict_disease(patient_symps):
@@ -34,13 +49,12 @@ def predict_disease(patient_symps):
             symptom_dict[i[0]] = 0
 
     model = pickle.load(open('.\ML_Models\RF_model.pkl','rb'))
-    features = list(symptom_dict.values())
-    # print(features)
-    disease = model.predict([features])
-    # print("Disease : ",)
     
-    # print(disease)
-    return str(disease[0])
+    features = list(symptom_dict.values())
+    disease_no = model.predict([features])
+
+    disease  = disease_order[disease_no[0]]
+    return disease
 
 def view_medical_history(email):
     my_cursor.execute(f'''
@@ -71,7 +85,7 @@ def schedule_appointment(email,doctor,time,date):
     print(patient_id[0],doctor_id[0])
 
     record = [date,time,patient_id[0],doctor_id[0]]
-    my_cursor.execute('INSERT INTO APPOINTMENT VALUES (%s,%s,%s,%s)',record)
+    my_cursor.execute('''
+                INSERT INTO APPOINTMENT(APPOINT_DATE,APPOINT_TIME,P_SSN,DOC_ID)
+                VALUES (%s,%s,%s,%s)''',record)
     db.commit()
-
-

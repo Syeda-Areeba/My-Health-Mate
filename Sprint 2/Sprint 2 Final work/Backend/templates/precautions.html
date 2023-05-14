@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Generated Results </title>
+        <link rel="stylesheet" type="text/css" href="../static/med_history.css">
+</head>
+<body>
+   
+        <header>
+            <h1>My Health Mate</h1>
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:5000/home.html">Home</a></li>
+			        <li><a href="http://localhost:5000/appointments.html">Appointments</a></li>
+			        <li><a href="http://localhost:5000/medical_history.html">Medical History</a></li>
+                    <li><a href="http://localhost:5000/Symptoms_selector_form.html">AI Prediction</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Disease Detection Results</h1>
+        <p>The ML model has detected: {{ disease }}</p>
+        <h2>Precautions:</h2>
+        <ul>
+            {% for precaution in precautions %}
+            <li>{{ precaution }}</li>
+            {% endfor %}
+        </ul>
+   
+        <footer>
+            <p>&copy; 2023 My Health Mate</p>
+        </footer>
+</body>
+</html>

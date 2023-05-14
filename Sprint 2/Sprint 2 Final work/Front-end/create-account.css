@@ -1,0 +1,383 @@
+.create-account-container {
+  min-height: 100vh;
+}
+.create-account-frame1 {
+  width: 100%;
+  height: 960px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(125, 193, 197, 0.8100000023841858);
+}
+.create-account-rectangle7 {
+  right: 0px;
+  width: 750px;
+  bottom: 0px;
+  height: 750px;
+  margin: auto;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 160px;
+}
+.create-account-rectangle9 {
+    right: 0px;
+    width: 300px;
+    bottom: 0px;
+    height: 60px;
+    margin: 86px;
+    position: absolute;
+    border-color: transparent;
+    border-radius: 160px;
+    top: 601px;
+    left: 550px;
+    position: absolute;
+    border-style: solid;
+    border-width: 1.5340659618377686px;
+ 
+}
+.create-account-rectangle8 {
+  top: 0px;
+  left: 0px;
+  width: 750px;
+  height: 750px;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 160px;
+}
+.create-account-rectangle1 {
+  top: 112px;
+  left: 471px;
+  width: 658px;
+  height: 737px;
+  margin: auto;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 49.090110778808594px;
+}
+.create-account-text {
+  top: 186px;
+  left: 560.5px;
+  color: var(--dl-color-default-heading);
+  width: 483px;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 55.22637176513672px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 700;
+  line-height: 71.79428100585938px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text02 {
+  top: 606px;
+  left: 532px;
+  color: rgb(50, 64, 59);
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 23.011px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.9143px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text03 {
+  top: 443px;
+  left: 531px;
+  color: rgb(50, 64, 59);
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 23.011px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.9143px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text04 {
+  left: 532px;
+  color: rgb(50, 64, 59);
+  width: auto;
+  bottom: 405.09375px;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 23.011px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.9143px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text05 {
+  top: 370px;
+  left: 534px;
+  color: rgb(50, 64, 59);
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 23.011px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.9143px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text06 {
+  top: 294px;
+  left: 533px;
+  color: rgb(50, 64, 59);
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 23.011px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.9143px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text07 {
+  top: 252px;
+  left: 566px;
+  color: rgba(50, 64, 59, 1);
+  width: 472px;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 23.010988235473633px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 400;
+  line-height: 29.914287567138672px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-rectangle2 {
+  top: 638px;
+  left: 522px;
+  width: 413px;
+  height: 41px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-rectangle21 {
+  top: 474px;
+  left: 523px;
+  width: 413px;
+  height: 41px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-rectangle22 {
+  left: 522px;
+  width: 413px;
+  bottom: 362px;
+  height: 41px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-rectangle23 {
+  top: 401px;
+  left: 523px;
+  width: 413px;
+  height: 41px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-rectangle24 {
+  top: 323px;
+  left: 525px;
+  width: 413px;
+  height: 41px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 0.10000000149011612);
+  border-style: solid;
+  border-width: 1.5340659618377686px;
+  border-radius: 15.340659141540527px;
+}
+.create-account-input {
+  top: 328px;
+  left: 543px;
+  width: 314px;
+  height: 27px;
+  padding: 0px;
+  position: absolute;
+  font-size: 20px;
+  border-color: #ffffff;
+}
+.create-account-textinput {
+  top: 410px;
+  left: 544px;
+  width: 314px;
+  height: 27px;
+  padding: 0px;
+  position: absolute;
+  font-size: 20px;
+  border-color: #ffffff;
+}
+.create-account-textinput1 {
+  left: 543px;
+  width: 314px;
+  bottom: 452px;
+  height: 27px;
+  padding: 0px;
+  position: absolute;
+  font-size: 20px;
+  border-color: #ffffff;
+}
+.create-account-textinput2 {
+  left: 541px;
+  width: 314px;
+  bottom: 370px;
+  height: 27px;
+  padding: 0px;
+  position: absolute;
+  font-size: 20px;
+  border-color: #ffffff;
+}
+.create-account-textinput3 {
+  top: 646px;
+  left: 537px;
+  padding: 0px;
+  position: absolute;
+  font-size: 20px;
+  border-color: #ffffff;
+  border-radius: var(--dl-radius-radius-radius8);
+}
+.create-account-century131 {
+  top: 65px;
+  left: 27px;
+  width: 252px;
+  height: 124px;
+  position: absolute;
+}
+.create-account-container1 {
+  top: 609.625px;
+  left: 604.40625px;
+  width: 0px;
+  height: 7px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.create-account-container2 {
+  top: 93px;
+  left: 0px;
+  width: 391px;
+  height: 91px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.create-account-link {
+  display: contents;
+}
+.create-account-rectangle4 {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 391px;
+  height: 91px;
+  margin: auto;
+  position: absolute;
+  border-color: transparent;
+  border-radius: 23.010988235473633px;
+  text-decoration: none;
+}
+.create-account-text09 {
+  top: 24.13543701171875px;
+  left: 73px;
+  color: rgba(255, 255, 255, 1);
+  width: 245px;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  font-size: 33.74945068359375px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: center;
+  font-family: Karla;
+  font-weight: 700;
+  line-height: 43.87428665161133px;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.create-account-text11 {
+    color: rgb(50, 64, 59);
+    right: 631px;
+    width: 327px;
+    bottom: 128px;
+    height: 27px;
+    margin: auto;
+    position: absolute;
+    font-size: 21.4769px;
+    align-self: auto;
+    font-style: Regular;
+    text-align: center;
+    font-family: Karla;
+    font-weight: 400;
+    line-height: 27.92px;
+    font-stretch: normal;
+    margin-right: 90px;
+    margin-bottom: 0;
+    text-decoration: underline;
+}

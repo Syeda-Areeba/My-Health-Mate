@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checkbox Form Example</title>
+	<style>
+
+body {
+	
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+    background-color: #6fedeb;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+main {
+  padding: 20px;
+  background-image: url('../static/symptoms1.jpg');
+}
+
+h2 {
+  margin-top: 0;
+}
+		/* Style the form container */
+		form {
+			/* background-color: #a6f7ea; */
+			/* padding: 250px; */
+			/* border-radius: 10px; */
+			/* width: 50%; */
+  			/* margin: 0 auto; */
+			  background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        max-width: 800px;
+        margin: 0 auto;
+		}
+		/* Style the checkboxes and labels */
+		label {
+			
+			position: relative;
+			padding-left: 25px;
+			margin-right: 15px;
+			cursor: pointer;
+			font-size: 18px;
+			display: block;
+  			margin-bottom: 10px;
+		}
+
+	
+
+		/* Style the submit button */
+		/*input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			margin-top: 20px;
+			transition: all 0.3s ease-in-out;
+		}
+		*/
+
+
+		input[type="submit"] {
+    background-color: #6fedeb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #00264d;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+footer {
+  background-color: #ddd;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+	.grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+		}
+	</style>
+</head>
+
+<!-- 
+<label><input type="checkbox" name="shivering">Shivering</label>
+
+<label><input type="checkbox" name="restlessness">Restlessness</label>
+<label><input type="checkbox" name="lethargy">Lethargy</label>
+<label><input type="checkbox" name="irregular_sugar_level">Irregular sugar level</label>
+<label><input type="checkbox" name="high_fever">High fever</label>
+
+<label><input type="checkbox" name="sweating">Sweating</label>
+<label><input type="checkbox" name="dehydration">Dehydration</label>
+<label><input type="checkbox" name="headache">Headache</label>
+<label><input type="checkbox" name="dark_urine">Dark urine</label>
+
+<label><input type="checkbox" name="mild_fever">Mild Fever</label><br>
+<label><input type="checkbox" name="yellow_urine">Yellow Urine</label><br>
+<label><input type="checkbox" name="yellowing_of_eyes">Yellowing of Eyes</label><br>
+<label><input type="checkbox" name="acute_liver_failure">Acute Liver Failure</label><br>
+<label><input type="checkbox" name="fluid_overload">Fluid Overload</label><br>
+<label><input type="checkbox" name="swelled_lymph_nodes">Swelled Lymph Nodes</label><br>
+<label><input type="checkbox" name="malaise">Malaise</label><br>
+
+<label><input type="checkbox" name="fast_heart_rate">Fast Heart Rate</label><br>
+<label><input type="checkbox" name="pain_during_bowel_movements">Pain During Bowel Movements</label><br>
+<label><input type="checkbox" name="pain_in_anal_region">Pain in Anal Region</label><br>
+<label><input type="checkbox" name="bloody_stool">Bloody Stool</label><br>
+<label><input type="checkbox" name="irritation_in_anus">Irritation in Anus</label><br>
+
+<label><input type="checkbox" name="dizziness">Dizziness</label><br>
+
+<label><input type="checkbox" name="bruising"> Bruising</label><br>
+<label><input type="checkbox" name="obesity"> Obesity</label><br>
+<label><input type="checkbox" name="swollen_legs"> Swollen Legs</label><br>
+<label><input type="checkbox" name="swollen_blood_vessels"> Swollen Blood Vessels</label><br>
+<label><input type="checkbox" name="puffy_face_and_eyes"> Puffy Face and Eyes</label><br>
+
+<label><input type="checkbox" name="brittle_nails"> Brittle Nails</label><br>
+<label><input type="checkbox" name="swollen_extremeties"> Swollen Extremities</label><br>
+
+<label><input type="checkbox" name="drying_and_tingling_lips"> Drying and Tingling Lips</label><br>
+<label><input type="checkbox" name="slurred_speech"> Slurred Speech</label><br>
+
+<label><input type="checkbox" name="spinning_movements"> Spinning Movements</label><br>
+<label><input type="checkbox" name="loss_of_balance"> Loss of Balance</label><br>
+<label><input type="checkbox" name="unsteadiness"> Unsteadiness</label><br>
+
+<label><input type="checkbox" name="loss_of_smell"> Loss of Smell</label><br>
+<label><input type="checkbox" name="bladder_discomfort"> Bladder Discomfort</label><br>
+<label><input type="checkbox" name="foul_smell_ofurine"> foul smell ofurine</label><br>
+<label><input type="checkbox" name="continuous_feel_of_urine"> continuous feel of urine</label><br>
+<label><input type="checkbox" name="passage_of_gases"> passage of gases</label><br>
+<label><input type="checkbox" name="internal_itching"> internal itching</label><br>
+<label><input type="checkbox" name="toxic_look_(typhos)"> toxic look (typhos)</label><br>
+
+<label><input type="checkbox" name="irritability"> irritability</label><br>
+<label><input type="checkbox" name="altered_sensorium"> altered sensorium</label><br>
+
+<label><input type="checkbox" name="abnormal_menstruation"> abnormal menstruation</label><br>
+<label><input type="checkbox" name="dischromic_patches"> dischromic patches</label><br>
+
+<label><input type="checkbox" name="polyuria"> polyuria</label><br>
+<label><input type="checkbox" name="mucoid_sputum"> mucoid sputum</label><br>
+<label><input type="checkbox" name="rusty_sputum"> rusty sputum</label><br>
+
+<label><input type="checkbox" name="receiving_blood_transfusion"> receiving blood transfusion</label><br>
+<label><input type="checkbox" name="receiving_unsterile_injections"> receiving unsterile injections</label><br>
+
+<label><input type="checkbox" name="fluid_overload"> fluid overload</label><br>
+<label><input type="checkbox" name="blood_in_sputum"> blood in sputum</label><br>
+<label><input type="checkbox" name="prominent_veins_on_calf"> prominent veins on calf</label><br>
+<label><input type="checkbox" name="palpitations"> palpitations</label><br>
+
+<label><input type="checkbox" name="blackheads"> blackheads</label><br>
+<label><input type="checkbox" name="scurring"> scurring</label><br>
+
+<label><input type="checkbox" name="silver_like_dusting"> silver like dusting</label><br>
+
+<label><input type="checkbox" name="yellow_crust_ooze"> yellow crust ooze</label><br>
+<label><input type="checkbox" name="prognosis"> prognosis</label><br> -->
+<body>
+	<header>
+		<h1>My Health Mate</h1>
+		<nav>
+			<ul>
+			  <li><a href="home.html">Home</a></li>
+			  <li><a href="appointments.html">Appointments</a></li>
+			  <li><a href="medical_history.html">Medical History</a></li>
+			  <li><a href="Symptoms_selector_form.html">AI Prediction</a></li>
+			</ul>
+		  </nav>
+	  </header>
+	  <main>
+	<h2>Disease Prediction Form</h2>
+	<form action="http://localhost:5000/Symptom-Form" method="POST">
+
+		<div class="checkbox-group">
+			<h2>Skin Symptoms:</h2>
+			<div class="grid">
+				<label><input type="checkbox" name="itching">Itching</label>
+				<label><input type="checkbox" name="skin_rash">Skin rash</label>
+				<label><input type="checkbox" name="nodal_skin_eruptions">Nodal skin eruptions</label>
+				<label><input type="checkbox" name="ulcers_on_tongue">Ulcers on tongue</label>
+				<label><input type="checkbox" name="yellowish_skin">Yellowish skin</label>
+				<label><input type="checkbox" name="skin_peeling"> skin peeling</label>
+				<label><input type="checkbox" name="small_dents_in_nails"> small dents in nails</label>
+				<label><input type="checkbox" name="inflammatory_nails"> inflammatory nails</label>
+				<label><input type="checkbox" name="blister"> blister</label>
+				<label><input type="checkbox" name="pus_filled_pimples"> pus filled pimples</label>
+			</div>
+		</div>
+		
+		<div class="checkbox-group">
+			<h2>Respiratory Symptoms:</h2>
+			<div class="grid">
+				<label><input type="checkbox" name="continuous_sneezing">Continuous sneezing</label>
+				<label><input type="checkbox" name="cough">Cough</label>
+				<label><input type="checkbox" name="breathlessness">Breathlessness</label>
+				<label><input type="checkbox" name="patches_in_throat">Patches in throat</label>
+				<label><input type="checkbox" name="sinus_pressure">Sinus Pressure</label>
+				<label><input type="checkbox" name="runny_nose">Runny Nose</label>
+				<label><input type="checkbox" name="congestion">Congestion</label>
+				<label><input type="checkbox" name="chest_pain">Chest Pain</label>
+				<label><input type="checkbox" name="throat_irritation">Throat Irritation</label>
+				<label><input type="checkbox" name="phlegm">Phlegm</label>
+				<label><input type="checkbox" name="enlarged_thyroid"> Enlarged Thyroid</label>
+				<label><input type="checkbox" name="red_sore_around_nose"> red sore around nose</label>
+				
+			</div>
+		</div>
+
+		<div class="checkbox-group">
+			<h2>Vision & Mental Symptoms:</h2>
+			<div class="grid">
+				<label><input type="checkbox" name="visual_disturbances"> visual disturbances</label><br>
+				<label><input type="checkbox" name="blurred_and_distorted_vision">Blurred and Distorted Vision</label>
+				<label><input type="checkbox" name="watering_from_eyes"> watering from eyes</label>
+				<label><input type="checkbox" name="redness_of_eyes">Redness of Eyes</label>
+				<label><input type="checkbox" name="sunken_eyes">Sunken eyes</label>
+				<label><input type="checkbox" name="pain_behind_the_eyes">Pain behind the eyes</label><br>
+				<label><input type="checkbox" name="anxiety">Anxiety</label>
+				<label><input type="checkbox" name="mood_swings">Mood swings</label>
+				<label><input type="checkbox" name="lack_of_concentration"> lack of concentration</label>
+				<label><input type="checkbox" name="depression"> depression</label>
+			</div>
+		</div>
+		
+		<div class="checkbox-group">
+			<h2>Body Symptoms:</h2>
+			<div class="grid">
+				<label><input type="checkbox" name="joint_pain">Joint pain</label>
+				<label><input type="checkbox" name="back_pain">Back pain</label>
+				<label><input type="checkbox" name="neck_pain">Neck Pain</label>
+				<label><input type="checkbox" name="muscle_wasting">Muscle wasting</label>
+				<label><input type="checkbox" name="muscle_pain"> Muscle pain</label>
+				<label><input type="checkbox" name="cold_hands_and_feets">Cold hands and feets</label>
+				<label><input type="checkbox" name="weight_gain">Weight gain</label>
+				<label><input type="checkbox" name="weight_loss">Weight loss</label>
+				<label><input type="checkbox" name="weakness_in_limbs">Weakness in Limbs</label>
+				<label><input type="checkbox" name="knee_pain"> Knee Pain</label>
+				<label><input type="checkbox" name="hip_joint_pain"> Hip Joint Pain</label>
+				<label><input type="checkbox" name="painful_walking"> Painful walking</label>
+				<label><input type="checkbox" name="muscle_weakness"> Muscle Weakness</label>
+				<label><input type="checkbox" name="stiff_neck"> Stiff Neck</label>
+				<label><input type="checkbox" name="swelling_joints"> Swelling Joints</label>
+				<label><input type="checkbox" name="movement_stiffness"> Movement Stiffness</label>
+				<label><input type="checkbox" name="weakness_of_one_body_side"> Weakness of One Body Side</label>
+				<label><input type="checkbox" name="red_spots_over_body"> Red spots over body</label>
+				<label><input type="checkbox" name="cramps">Cramps</label>
+			</div>
+		</div>
+		
+		<div class="checkbox-group">
+			<h2>Stomach Symptoms:</h2>
+			<div class="grid">
+				<label><input type="checkbox" name="stomach_pain">Stomach pain</label>
+				<label><input type="checkbox" name="acidity">Acidity</label>
+				<label><input type="checkbox" name="vomiting">Vomiting</label>
+				<label><input type="checkbox" name="excessive_hunger"> Excessive Hunger</label>
+				<label><input type="checkbox" name="burning_micturition">Burning micturition</label>
+				<label><input type="checkbox" name="spotting_urination">Spotting urination</label>
+				<label><input type="checkbox" name="constipation">Constipation</label>
+				<label><input type="checkbox" name="abdominal_pain">Abdominal pain</label>
+				<label><input type="checkbox" name="diarrhoea">Diarrhoea</label>
+				<label><input type="checkbox" name="indigestion">Indigestion</label>
+				<label><input type="checkbox" name="loss_of_appetite">Loss of appetite</label>
+				<label><input type="checkbox" name="swelling_of_stomach">Swelling of Stomach</label>
+				<label><input type="checkbox" name="increased_appetite"> Increased appetite</label>
+				<label><input type="checkbox" name="nausea">Nausea</label>
+				<label><input type="checkbox" name="belly_pain"> Belly pain</label>
+				<label><input type="checkbox" name="feeling_weak">Feeling weak</label>
+				<label><input type="checkbox" name="chills">Chills</label>
+				<label><input type="checkbox" name="fatigue">Fatigue</label>
+				<label><input type="checkbox" name="stomach_bleeding"> Stomach bleeding</label>
+				<label><input type="checkbox" name="distention_of_abdomen"> Distention of abdomen</label>
+			</div>
+		</div>
+		
+		<div class="checkbox-group">
+			<h2>Other Symptoms:</h2>
+			<div class="grid">
+				<label><input type="checkbox" name="coma"> Coma</label>
+				<label><input type="checkbox" name="history_of_alcohol_consumption"> History of alcohol consumption</label>
+				<label><input type="checkbox" name="family_history"> Family history in a particular disease</label>
+				<label><input type="checkbox" name="toxic_look_(typhos)"> toxic look (typhos)</label><br>
+			</div>
+		</div>
+
+
+		<input type="submit" value="Submit">
+	</form>
+</main>
+<footer>
+  <p>&copy; 2023 My Health Mate</p>
+</footer>
+</body>
+</html>

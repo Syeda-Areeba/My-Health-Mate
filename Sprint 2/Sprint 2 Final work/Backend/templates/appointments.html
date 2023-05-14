@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Patient Portal - Book Appointment</title>
+    <link rel="stylesheet" type="text/css" href="../static/style2.css">
+  </head>
+  <body>
+    
+	<script>
+		var categoryObject = {
+			"Cardiologist":["Dr. John Smith"],
+			"Neurologist":["Dr. Sarah Lee"],
+			"Ophthalmologist":["Dr. David Wong"],
+			"General Surgeon":["Dr. Rachel Cohen"],
+			"Internal Medicine Specialist":["Dr. Andreas Maller"],
+			"Pediatrician":["Dr. Ana Rodriguez"],
+			"ENT Specialist":["Dr. Mohamed Ahmed"],
+			"Oncologist":["Dr. Maryam Khan"],
+			"Orthopedic Surgeon":["Dr. Stefan Schneider"],
+			"Dermatologist":["Dr. Sofia Martinez"],
+			"Gastroenterologist":["Dr. Amir Ali"],
+			"Physical Therapist":["Dr. Emma Wilson"],
+			"Urologist":["Dr. Juan Hernandez"],
+			"Radiologist":["Dr. Fatima Ali"],
+			"Pulmonologist":["Dr. Kim Sung"],
+			"General Practitioner":["Dr. Laila Ahmed"],
+			"Cardiothoracic Surgeon":["Dr. Paolo Rossi"],
+			"Rheumatologist":["Dr. Anna Nguyen"],
+			"Endocrinologist":["Dr. Ahmed Khan"],
+			"Psychiatrist":["Dr. Maria Garcia"],
+			"Hematologist":["Dr. Tariq Malik"],
+			"Allergist":["Dr. Jennifer Kim"],
+			"Plastic Surgeon":["Dr. Mohammed Ali"],
+			"Infectious Disease Specialist":["Dr. Laura Perez"]
+		}
+
+		window.onload = function() {
+		  var categorySel = document.getElementById("category");
+		  var docSel = document.getElementById("doctor");
+		  for (var x in categoryObject) {
+		    categorySel.options[categorySel.options.length] = new Option(x, x);
+		  }
+		  categorySel.onchange = function() {
+		    //empty Cities dropdown
+		    docSel.length = 1;
+		    //display correct values
+		    var z = categoryObject[this.value];
+		    for (var i = 0; i < z.length; i++) {
+				docSel.options[docSel.options.length] = new Option(z[i], z[i]);
+		    }
+		  }
+		}
+	</script>
+    <header>
+      <h1>My Health Mate</h1>
+	  <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="medical_history.html">Medical History</a></li>
+		  <li><a href="Symptoms_selector_form.html">AI Prediction</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Book Appointment</h2>
+      <form action="http://localhost:5000/Appointments-booking" method="POST">
+        <label for="date">Date:</label>
+        	<input type="date" id="date" name="date"><br><br>
+
+        <label for="time">Select a time:</label>
+        	<input type="time" id="time" name="time">
+
+        <label for="category">Disease category:</label>
+			<select name="category" id="category">
+			<option value="" selected="selected">Select category</option>
+			</select>
+        <br><br>
+
+        <label for="doctor">Doctor:</label>
+			<select name="doctor" id="doctor">
+			<option value="" selected="selected">Please select doctor</option>
+			</select>
+        <br><br>
+
+        <label for="reason">Reason for Visit:</label>
+			<textarea id="reason" name="reason"></textarea><br><br>
+			<input type="submit" value="Book Appointment">
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Health Mate</p>
+    </footer>
+  </body>
+</html>

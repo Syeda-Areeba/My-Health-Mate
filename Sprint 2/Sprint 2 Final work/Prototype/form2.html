@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Symptoms Form</title>
+    <style>
+      /* CSS styling */
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="http://localhost:5000/Symptom-Form">
+      <fieldset>
+        <legend>Select Symptoms:</legend>
+        <label><input type="checkbox" name="itching" value="itching"> Itching</label>
+        <label><input type="checkbox" name="skin_rash" value="skin_rash"> Skin Rash</label>
+        <label><input type="checkbox" name="nodal_skin_eruptions" value="nodal_skin_eruptions"> Nodal Skin Eruptions</label>
+        <label><input type="checkbox" name="continuous_sneezing" value="continuous_sneezing"> Continuous Sneezing</label>
+        <label><input type="checkbox" name="shivering" value="shivering"> Shivering</label>
+        <!-- add more checkboxes for the other symptoms -->
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
